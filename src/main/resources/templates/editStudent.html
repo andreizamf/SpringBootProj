@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Edit Student</title>
+</head>
+<body>
+	<h2>Edit Student</h2>
+	<div class="container">
+	<form th:object="${student}" th:action="@{~/update}" method="POST">
+		<input type="text" th:field="*{id}" class="form-control"/>
+		<input type="text" th:field="*{firstName}" class="form-control col-md-4" />
+		<input type="text" th:field="*{lastName}" class="form-control col-md-4" />
+		<input type="text" th:field="*{email}" class="form-control col-md-4" />
+		<input type="submit" class="btn btn-primary" value="Editare"/>
+	</form>
+	</div>
+</body>
+</html>
